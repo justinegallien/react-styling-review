@@ -1,0 +1,33 @@
+@use "./index.scss" as *;
+
+
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.flashing{
+    font-size: 5rem;
+    background: linear-gradient(90deg, #73bbb4, #0d8c97, #affc41, #8338ec, #da1a87);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shine 2s linear infinite;
+}
+
+.footer {
+    background-color: $primary;
+    color: $secondary;
+    border-color: $highlight;
+
+    p {
+        font-family: 'Times New Roman', Times, serif;
+        color: $highlight;
+
+        &:hover {
+            text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+            color: darken($color: $highlight, $amount: 15%)
+        }}}
